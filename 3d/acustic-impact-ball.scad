@@ -163,6 +163,7 @@ module lid() {
             translate([0,0,-1.25]) cylinder(r=26, h=1.25);
             //encaje altavoz
             translate([0,0,-2.25]) cylinder(r=20.15, h=4);
+            translate([0,0,-1]) cylinder(r=17.5, h=5);
             //silueta cuerpo
             difference() {
                 hull() {
@@ -182,14 +183,14 @@ module lid() {
             *translate([0,0,1]) cylinder(r=17.5, h=5);
             translate([0,0,1]) cylinder(r=1.5, h=5);
             for(i = [0:20:359]) {
-                rotate([0,0,i]) translate([17,0,1]) cylinder(r=1.5, h=5);
-                rotate([0,0,i+10]) translate([13,0,1]) cylinder(r=1.5, h=5);
+                rotate([0,0,i]) translate([16,0,1]) cylinder(r=1.5, h=5); //was 17
+                rotate([0,0,i+10]) translate([12,0,1]) cylinder(r=1.5, h=5); //was 13
             }
-            for(i = [0:40:359]) {
-                rotate([0,0,i]) translate([9,0,1]) cylinder(r=1.5, h=5);
+            for(i = [0:30:359]) {
+                rotate([0,0,i]) translate([8,0,1]) cylinder(r=1.5, h=5); //was 9
             }
             for(i = [0:60:359]) {
-                rotate([0,0,i]) translate([5,0,1]) cylinder(r=1.5, h=5);
+                rotate([0,0,i]) translate([4,0,1]) cylinder(r=1.5, h=5); //was 5
             }
             //taladros montaje tapa
             union() {
