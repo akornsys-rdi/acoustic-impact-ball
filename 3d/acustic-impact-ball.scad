@@ -1,9 +1,10 @@
 $fn=36;
 
 translate([-19,-9,1]) rotate([90,0,0]) pcb();
-translate([0,0,99]) speaker();
-translate([0,0,85.75]) ring();
-translate([0,0,0]) lid();
+translate([0,0,99.5]) speaker();
+translate([0,0,86.25]) ring();
+translate([-10,-15,81]) color("ivory") cube([20,30,1]); //foam
+translate([0,0,97.5]) lid();
 translate([14.25,-14.4,0.6]) rotate([0,180,0]) switch_handler();
 housing();
 
@@ -12,29 +13,17 @@ module housing() {
         union() {
             //body
             hull() {
-                translate([18,-10,0]) cylinder(r=7, h=100);
-                translate([-18,-10,0]) cylinder(r=7, h=100);
-                translate([0,18,0]) cylinder(r=7, h=80);
-                translate([0,0,99.9]) cylinder(r=26, h=0.1);
+                translate([18,-10,0]) cylinder(r=7, h=100.5);
+                translate([-18,-10,0]) cylinder(r=7, h=100.5);
+                translate([0,0,0]) cylinder(r=26, h=100.5);
             }
             //tornillos tapa
             union() {
-                translate([0,0,86]) for (i = [0:120:359]) {
+                translate([0,0,86.5]) for (i = [0:120:359]) {
                     rotate([0,0,i+60]) hull() {
-                        cylinder(r=4, h=10);
-                        translate([0,-30.75,0]) cylinder(r=4, h=10);
-                    }
-                }
-            }
-            //dientes
-            union() {
-                for (j = [0:29:80]) {
-                    translate([0,0,j]) for (i = [0:120:359]) {
-                        rotate([0,0,i+60]) hull() {
-                            translate([-2.5,-35,0]) cube([5,15,0.1]);
-                            translate([-0.5,-30,5]) rotate([0,90,0]) cylinder(r=3, h=1);
-                            translate([-0.5,-25,5]) rotate([0,90,0]) cylinder(r=3, h=1);
-                        }
+                        cylinder(r1=2, r2=4, h=10);
+                        translate([0,-30.75+1.75,0]) cylinder(r1=2, r2=4, h=10);
+                        translate([0,-25+1.75,-20]) cylinder(r=1, h=10);
                     }
                 }
             }
@@ -44,72 +33,69 @@ module housing() {
                 union() {
                     //interior
                     hull() {
-                        translate([18,-10,1]) cylinder(r=5, h=100);
-                        translate([-18,-10,1]) cylinder(r=5, h=100);
-                        translate([0,18,1]) cylinder(r=5, h=80);
-                        translate([0,0,100]) cylinder(r=24, h=0.1);
-                    }
-                    //portabaterías interior
-                    union() {
-                        translate([-10.75,-8.75,1]) cube([21.5,21.5,10]);
+                        translate([18,-10,1]) cylinder(r=5, h=101);
+                        translate([-18,-10,1]) cylinder(r=5, h=101);
+                        translate([0,0,1]) cylinder(r=24, h=101);
                     }
                     //rebaje interruptor
-                    union() {
-                        translate([10,-14.9,0.6]) cube([7, 7.5, 1]);
-                    }
+                    translate([10,-14.9,0.6]) cube([7, 7.5, 1]);
                     //conectores
                     union() {
                         translate([-16.75,-15,-1]) cube([9,5,3]);
                         translate([10,-12.9,-1]) cube([7,3.5,3]);
                     }
                     //hueco suelo
-                    union() {
-                        translate([0,0,-1]) hull() {
-                            translate([0,14.5,0]) cylinder(r=3, h=3);
-                            translate([10,0,0]) cylinder(r=3, h=3);
-                            translate([-10,0,0]) cylinder(r=3, h=3);
+                    translate([0,0,-1]) difference() {
+                        cylinder(r=17.5, h=3);
+                        union() {
+                            translate([-18,-18,-1]) cube([36,18,5]);
+                            translate([-18,16.5,-1]) cube([36,18,5]);
+                            translate([-1.25,-1,-1]) cube([2.5,19,5]);
                         }
                     }
                     //cortes laterales
                     translate([0,0,10]) for(i= [0:120:359]) {
                         rotate([0,0,i]) hull() {
-                            rotate([90,0,0]) cylinder(r=3, h=25);
-                            translate([15,0,10]) rotate([90,0,0]) cylinder(r=3, h=25);
-                            translate([-15,0,10]) rotate([90,0,0]) cylinder(r=3, h=25);
-                            translate([0,0,68]) rotate([90,0,0]) cylinder(r=3, h=25);
-                            translate([15,0,58]) rotate([90,0,0]) cylinder(r=3, h=25);
-                            translate([-15,0,58]) rotate([90,0,0]) cylinder(r=3, h=25);
+                            rotate([90,0,0]) cylinder(r=3, h=27);
+                            translate([15,0,15]) rotate([90,0,0]) cylinder(r=3, h=27);
+                            translate([-15,0,15]) rotate([90,0,0]) cylinder(r=3, h=27);
+                            translate([0,0,67.5]) rotate([90,0,0]) cylinder(r=3, h=27);
+                            translate([15,0,52.5]) rotate([90,0,0]) cylinder(r=3, h=27);
+                            translate([-15,0,52.5]) rotate([90,0,0]) cylinder(r=3, h=27);
                         }
                     }
                     //taladros montaje tapa
-                    translate([0,0,85]) for (i = [0:120:359]) {
-                        rotate([0,0,i]) translate([0,30.75,0]) cylinder(r=1.25, h=12);
+                    translate([0,0,76.5]) for (i = [0:120:359]) {
+                        rotate([0,0,i]) translate([0,30.75-1.75,0]) cylinder(r=1.25, h=21);
+                        rotate([0,0,i]) translate([0,30.75-1.75,20]) cylinder(r=3, h=6);
                     }
                 }
-                //guias pcb
                 union() {
-                    translate([-20.25,-11.8,0]) cube([1,4, 80]);
-                    translate([-25,-11.8,0]) cube([7,1, 80]);
-                    translate([-25,-8.8,0]) cube([7,1, 80]);
-                    translate([19.25,-10.8,0]) cube([1,2, 80]);
-                    translate([18,-11.8,0]) cube([7,1, 80]);
-                    translate([18,-8.8,0]) cube([7,1, 80]);
-                }
-                //guia bateria
-                union() {
-                    hull() {
-                        translate([-0.5,18,0]) cube([1,7, 40]);
-                        translate([-0.5,24,0]) cube([1,1, 80]);
-                        translate([-0.5,15.5,30]) rotate([0,90,0]) cylinder(r=3, h=1);
-                        translate([-0.5,15.5,50]) rotate([0,90,0]) cylinder(r=3, h=1);
+                    //guias pcb
+                    union() {
+                        translate([-20.25,-11.8,0]) cube([1,4, 81]);
+                        translate([-25,-11.8,0]) cube([7,1, 81]);
+                        translate([-25,-8.8,0]) cube([7,1, 81]);
+                        translate([19.25,-10.8,0]) cube([1,2, 81]);
+                        translate([18,-11.8,0]) cube([7,1, 81]);
+                        translate([18,-8.8,0]) cube([7,1, 81]);
                     }
-                }
-                //soporte anillo altavoz
-                union() {
-                    translate([0,0,81]) for(i = [0:120:359]) {
-                        rotate([0,0,i]) hull() {
-                            translate([-2.5,-23,0]) cube([5,0.1,0.1]);
-                            translate([-2.5,-23,4.5]) cube([5,5,0.1]);
+                    //guia bateria
+                    union() {
+                        hull() {
+                            translate([-1,18,0]) cube([2,7, 40]);
+                            translate([-1,24,0]) cube([2,1, 80]);
+                            translate([-1,15.5,30]) rotate([0,90,0]) cylinder(r=3, h=2);
+                            translate([-1,15.5,50]) rotate([0,90,0]) cylinder(r=3, h=2);
+                        }
+                    }
+                    //soporte anillo altavoz
+                    union() {
+                        translate([0,0,80.5]) for(i = [0:120:359]) {
+                            rotate([0,0,i]) hull() {
+                                translate([-2.5,-24,0]) cube([5,0.1,0.1]);
+                                translate([-2.5,-24,5.5]) cube([5,5,0.1]);
+                            }
                         }
                     }
                 }
@@ -158,62 +144,58 @@ module lid() {
         union() {
             //body
             hull() {
-                translate([18,-10,0]) cylinder(r=7, h=102);
-                translate([-18,-10,0]) cylinder(r=7, h=102);
-                translate([0,18,0]) cylinder(r=7, h=80);
-                translate([0,0,99.9]) cylinder(r=26, h=2.1);
+                translate([18,-10,0]) cylinder(r=7, h=5);
+                translate([-18,-10,0]) cylinder(r=7, h=5);
+                translate([0,0,0]) cylinder(r=26, h=5);
             }
-            //tornillos tapa
+            //torres tornillos tapa
             union() {
-                translate([0,0,96.25]) for (i = [0:120:359]) {
+                translate([0,0,-0.75]) for (i = [0:120:359]) {
                     rotate([0,0,i+60]) hull() {
                         cylinder(r=4, h=5.75);
-                        translate([0,-30.75,0]) cylinder(r=4, h=5.75);
+                        translate([0,-30.75+1.75,0]) cylinder(r=4, h=5.75);
                     }
                 }
             }
         }
         union() {
-            //altura
-            union() {
-                translate([0,0,-1]) cylinder(r=26, h=98);
-            }
+            //recorte profundidad
+            translate([0,0,-1.25]) cylinder(r=26, h=1.25);
             //encaje altavoz
-            union() {
-                translate([0,0,94.75]) cylinder(r=20.15, h=4);
-            }
+            translate([0,0,-2.25]) cylinder(r=20.15, h=4);
             //silueta cuerpo
             difference() {
                 hull() {
-                    translate([18,-10,-1]) cylinder(r=7.25, h=101);
-                    translate([-18,-10,-1]) cylinder(r=7.25, h=101);
-                    translate([0,18,-1]) cylinder(r=7.25, h=81);
-                    translate([0,0,99.9]) cylinder(r=26.25, h=0.1);
+                    translate([18,-10,-1]) cylinder(r=7.25, h=4);
+                    translate([-18,-10,-1]) cylinder(r=7.25, h=4);
+                    translate([0,0,-1]) cylinder(r=26.25, h=4);
                 }
                 union() {
                     hull() {
-                        translate([18,-10,1]) cylinder(r=4.75, h=100);
-                        translate([-18,-10,1]) cylinder(r=4.75, h=100);
-                        translate([0,18,1]) cylinder(r=4.75, h=80);
-                        translate([0,0,100]) cylinder(r=23.75, h=0.1);
+                        translate([18,-10,-2]) cylinder(r=4.75, h=6);
+                        translate([-18,-10,-2]) cylinder(r=4.75, h=6);
+                        translate([0,0,-2]) cylinder(r=23.75, h=6);
                     }
                 }
             }
-            //taladros altavoz
-            union() {
-                translate([0,0,98]) union() {
-                    *for (i = [0:22.5:359]) rotate([0,0,i]) translate([17,0,0]) cylinder(r=1.75, h=4);
-                    *for (i = [11.25:22.5:359]) rotate([0,0,i]) translate([11.5,0,0]) cylinder(r=1.75, h=4);
-                    *for (i = [0:45:359]) rotate([0,0,i]) translate([6,0,0]) cylinder(r=1.75, h=4);
-                    *cylinder(r=1.75, h=4);
-                    cylinder(r=17.5, h=5);
-                }
+            //taladro altavoz
+            *translate([0,0,1]) cylinder(r=17.5, h=5);
+            translate([0,0,1]) cylinder(r=1.5, h=5);
+            for(i = [0:20:359]) {
+                rotate([0,0,i]) translate([17,0,1]) cylinder(r=1.5, h=5);
+                rotate([0,0,i+10]) translate([13,0,1]) cylinder(r=1.5, h=5);
+            }
+            for(i = [0:40:359]) {
+                rotate([0,0,i]) translate([9,0,1]) cylinder(r=1.5, h=5);
+            }
+            for(i = [0:60:359]) {
+                rotate([0,0,i]) translate([5,0,1]) cylinder(r=1.5, h=5);
             }
             //taladros montaje tapa
             union() {
-                translate([0,0,96]) for (i = [0:120:359]) {
-                    rotate([0,0,i]) translate([0,30.75,2.5]) cylinder(r=3, h=4);
-                    rotate([0,0,i]) translate([0,30.75,0]) cylinder(r=1.75, h=7);
+                translate([0,0,-1]) for (i = [0:120:359]) {
+                    rotate([0,0,i]) translate([0,30.75-1.75,2.5]) cylinder(r=3, h=4);
+                    rotate([0,0,i]) translate([0,30.75-1.75,0]) cylinder(r=1.75, h=7);
                 }
             }
         }
