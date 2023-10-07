@@ -9,11 +9,12 @@
 #define INITIAL_DELAY 10000       // tiempo de retraso en empezar a funcionar
 #define VOLUME 70                 // volumen de la reproduccion. 0 to 100
 
+// Arduino v1.8.19 on Arduino Zero (Native) v1.8.13
 #include <Wire.h>
-#include <Adafruit_LIS3DH.h>
-#include <Adafruit_Sensor.h>
+#include <Adafruit_LIS3DH.h> //v1.2.4
+#include <Adafruit_Sensor.h> //v1.1.7
 #include <SD.h>
-#include <ArduinoSound.h>
+#include <ArduinoSound.h> //v0.2.1
 
 Adafruit_LIS3DH imu = Adafruit_LIS3DH();
 const char filename[] = "AUDIO.WAV";
@@ -150,6 +151,7 @@ unsigned long read_imu() {
 // Requiere:
 //  batt_low: puntero donde se guarda el estado de batería baja
 //  motion: puntero donde se guarda la deteccion de movimiento
+//  initial_delay: puntero donde se guarda el estado de retardo al inicio
 void set_status(boolean *batt_low, boolean *motion, boolean *initial_delay) {
     static boolean start_delay_imu = false;
     static unsigned long t_batt = 0;
@@ -186,6 +188,7 @@ void set_status(boolean *batt_low, boolean *motion, boolean *initial_delay) {
 //  batt_low: indicador de batería baja
 //  hw_error: indicador de fallo de hardware
 //  playing: indicador de reproduccion de audio
+//  initial_delay: indicador de retardo al inicio
 void display_status(boolean batt_low, boolean hw_error, boolean playing, boolean initial_delay) {
     if (batt_low) digitalWrite(DEBUG, HIGH);
     else if (hw_error) digitalWrite(DEBUG, millis() & 0x20);
