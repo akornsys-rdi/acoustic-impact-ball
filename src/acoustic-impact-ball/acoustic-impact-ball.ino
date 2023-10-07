@@ -1,10 +1,10 @@
 #define DEBUG 13
 
 #define BATTERY_MEAN_SIZE 512     // numero de muestras para la media en `read_battery()`
-#define BATTERY_THRESHOLD 2950    // tensión de umbral para bateria baja
+#define BATTERY_THRESHOLD 2800    // tensión de umbral para bateria baja
 #define IMU_DEVIATION_SIZE 160    // numero de muestras para la desviacion tipica en `read_imu()`
-#define ATTACK_THRESHOLD 45       // umbral de inicio de deteccion de movimiento
-#define DECAY_THRESHOLD 25        // umbral de paro de deteccion de movimento
+#define ATTACK_THRESHOLD 95       // umbral de inicio de deteccion de movimiento
+#define DECAY_THRESHOLD 65        // umbral de paro de deteccion de movimento
 #define DECAY_DELAY 1000          // retraso en el paro de la deteccion de movimiento
 #define INITIAL_DELAY 10000       // tiempo de retraso en empezar a funcionar
 #define VOLUME 70                 // volumen de la reproduccion. 0 to 100
