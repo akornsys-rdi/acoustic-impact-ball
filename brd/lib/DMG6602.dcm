@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP DMG6602
-D Dual N and P Channel MOSFET, 20V Vds, 6.5A Id, 30mΩ Rds @ 4.5V Vgs, SO8L
-K Dual N-Channel P-Channel MOSFET
-F https://www.fairchildsemi.com/datasheets/FD/FDS9934C.pdf
-$ENDCMP
-#
-#End Doc Library

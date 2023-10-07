@@ -1,8 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP W25_FLASH
-D External FLASH with SPI interface in 8-pin package
-K FLASH memory SPI serial
-$ENDCMP
-#
-#End Doc Library

@@ -1,0 +1,1014 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:USB_B_Mini J3
+U 1 1 64DAC979
+P 2350 2850
+F 0 "J3" H 2407 3317 50  0000 C CNN
+F 1 "USB_B_Mini" H 2407 3226 50  0000 C CNN
+F 2 "Connector_USB:USB_Mini-B_Wuerth_65100516121_Horizontal" H 2500 2800 50  0001 C CNN
+F 3 "lib/datasheets/65100516121.pdf" H 2500 2800 50  0001 C CNN
+F 4 "Wurth Elektronik" H 2350 2850 50  0001 C CNN "Manufacturer"
+F 5 "65100516121" H 2350 2850 50  0001 C CNN "Manufacturer Part Number"
+	1    2350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Management:MCP73831-2-OT U4
+U 1 1 64DAC97F
+P 4550 2750
+F 0 "U4" H 4300 3000 50  0000 C CNN
+F 1 "MCP73831-2-OT" H 4900 2500 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4600 2500 50  0001 L CIN
+F 3 "lib/datasheets/MCP73831.pdf" H 4400 2700 50  0001 C CNN
+F 4 "Microchip Technology" H 4550 2750 50  0001 C CNN "Manufacturer"
+F 5 "MCP73831T-2ACI/OT" H 4550 2750 50  0001 C CNN "Manufacturer Part Number"
+	1    4550 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L7805 U5
+U 1 1 64DAC985
+P 9900 2800
+F 0 "U5" H 9900 3042 50  0000 C CNN
+F 1 "MIC5201" H 9900 2951 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 9925 2650 50  0001 L CIN
+F 3 "lib/datasheets/MIC5201.pdf" H 9900 2750 50  0001 C CNN
+F 4 "Microchip Technology" H 9900 2800 50  0001 C CNN "Manufacturer"
+F 5 "MIC5201-3.3YS-TR" H 9900 2800 50  0001 C CNN "Manufacturer Part Number"
+	1    9900 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L TPS61230A:TPS61230A U6
+U 1 1 64DAC98B
+P 7650 2950
+F 0 "U6" H 7300 3300 50  0000 C CNN
+F 1 "TPS61230A" H 7900 2600 50  0000 C CNN
+F 2 "TPS61230A:TPS61230A" H 7650 2950 50  0001 C CNN
+F 3 "lib/datasheets/TPS61230A.pdf" H 7650 2950 50  0001 C CNN
+F 4 "Texas Instruments" H 7650 2950 50  0001 C CNN "Manufacturer"
+F 5 "TPS61230ARNSR" H 7650 2950 50  0001 C CNN "Manufacturer Part Number"
+	1    7650 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR040
+U 1 1 64DAC991
+P 9900 3350
+F 0 "#PWR040" H 9900 3100 50  0001 C CNN
+F 1 "GND" H 9905 3177 50  0000 C CNN
+F 2 "" H 9900 3350 50  0001 C CNN
+F 3 "" H 9900 3350 50  0001 C CNN
+	1    9900 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR032
+U 1 1 64DAC997
+P 9100 2650
+F 0 "#PWR032" H 9100 2500 50  0001 C CNN
+F 1 "+5V" H 9115 2823 50  0000 C CNN
+F 2 "" H 9100 2650 50  0001 C CNN
+F 3 "" H 9100 2650 50  0001 C CNN
+	1    9100 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR033
+U 1 1 64DAC99D
+P 10350 2650
+F 0 "#PWR033" H 10350 2500 50  0001 C CNN
+F 1 "+3.3V" H 10365 2823 50  0000 C CNN
+F 2 "" H 10350 2650 50  0001 C CNN
+F 3 "" H 10350 2650 50  0001 C CNN
+	1    10350 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C25
+U 1 1 64DAC9A3
+P 10350 3100
+F 0 "C25" H 10400 3200 50  0000 L CNN
+F 1 "1µF" H 10400 3000 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10388 2950 50  0001 C CNN
+F 3 "" H 10350 3100 50  0001 C CNN
+F 4 "amsung Electro-Mechanics" H 10350 3100 50  0001 C CNN "Manufacturer"
+F 5 "CL21B105KOFNNNG" H 10350 3100 50  0001 C CNN "Manufacturer Part Number"
+	1    10350 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR041
+U 1 1 64DAC9A9
+P 10350 3350
+F 0 "#PWR041" H 10350 3100 50  0001 C CNN
+F 1 "GND" H 10355 3177 50  0000 C CNN
+F 2 "" H 10350 3350 50  0001 C CNN
+F 3 "" H 10350 3350 50  0001 C CNN
+	1    10350 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 3350 10350 3250
+Wire Wire Line
+	10350 2950 10350 2800
+Wire Wire Line
+	10200 2800 10350 2800
+Connection ~ 10350 2800
+Wire Wire Line
+	10350 2800 10350 2650
+Wire Wire Line
+	9900 3350 9900 3100
+$Comp
+L power:GND #PWR038
+U 1 1 64DAC9C1
+P 9100 3350
+F 0 "#PWR038" H 9100 3100 50  0001 C CNN
+F 1 "GND" H 9105 3177 50  0000 C CNN
+F 2 "" H 9100 3350 50  0001 C CNN
+F 3 "" H 9100 3350 50  0001 C CNN
+	1    9100 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 3350 9100 3250
+Wire Wire Line
+	9100 2950 9100 2800
+Connection ~ 9100 2800
+Wire Wire Line
+	9100 2800 9100 2650
+$Comp
+L Device:R R6
+U 1 1 64DAC9CC
+P 8450 3050
+F 0 "R6" H 8500 3200 50  0000 L CNN
+F 1 "316k" V 8450 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8380 3050 50  0001 C CNN
+F 3 "" H 8450 3050 50  0001 C CNN
+F 4 "Yageo" H 8450 3050 50  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-07316KL" H 8450 3050 50  0001 C CNN "Manufacturer Part Number"
+	1    8450 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 64DAC9D2
+P 8450 3450
+F 0 "R10" H 8500 3600 50  0000 L CNN
+F 1 "95k3" V 8450 3450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8380 3450 50  0001 C CNN
+F 3 "" H 8450 3450 50  0001 C CNN
+F 4 "Yageo" H 8450 3450 50  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-0795K3L" H 8450 3450 50  0001 C CNN "Manufacturer Part Number"
+	1    8450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR043
+U 1 1 64DAC9D8
+P 8450 3700
+F 0 "#PWR043" H 8450 3450 50  0001 C CNN
+F 1 "GND" H 8455 3527 50  0000 C CNN
+F 2 "" H 8450 3700 50  0001 C CNN
+F 3 "" H 8450 3700 50  0001 C CNN
+	1    8450 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3700 8450 3600
+Wire Wire Line
+	8450 3300 8450 3250
+Wire Wire Line
+	8450 2900 8450 2800
+Wire Wire Line
+	8700 2800 9100 2800
+Wire Wire Line
+	8200 3100 8300 3100
+Wire Wire Line
+	8300 3100 8300 3250
+Wire Wire Line
+	8300 3250 8450 3250
+Connection ~ 8450 3250
+Wire Wire Line
+	8450 3250 8450 3200
+Wire Wire Line
+	8200 2800 8450 2800
+$Comp
+L power:GND #PWR042
+U 1 1 64DAC9E9
+P 7650 3500
+F 0 "#PWR042" H 7650 3250 50  0001 C CNN
+F 1 "GND" H 7655 3327 50  0000 C CNN
+F 2 "" H 7650 3500 50  0001 C CNN
+F 3 "" H 7650 3500 50  0001 C CNN
+	1    7650 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3500 7650 3400
+$Comp
+L Device:R R9
+U 1 1 64DAC9F0
+P 6750 3250
+F 0 "R9" V 6650 3200 50  0000 L CNN
+F 1 "1k" V 6750 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6680 3250 50  0001 C CNN
+F 3 "" H 6750 3250 50  0001 C CNN
+F 4 "Yageo" H 6750 3250 50  0001 C CNN "Manufacturer"
+F 5 "RC0805JR-071KL" H 6750 3250 50  0001 C CNN "Manufacturer Part Number"
+	1    6750 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 64DAC9F6
+P 6150 3000
+AR Path="/64DAC9F6" Ref="L?"  Part="1" 
+AR Path="/64D9993D/64DAC9F6" Ref="L3"  Part="1" 
+F 0 "L3" V 6340 3000 50  0000 C CNN
+F 1 "1µH" V 6249 3000 50  0000 C CNN
+F 2 "Inductor_SMD:L_Wuerth_MAPI-4020" H 6150 3000 50  0001 C CNN
+F 3 "lib/datasheets/74438356010.pdf" H 6150 3000 50  0001 C CNN
+F 4 "Wurth Elektronik" H 6150 3000 50  0001 C CNN "Manufacturer"
+F 5 "74438356010" H 6150 3000 50  0001 C CNN "Manufacturer Part Number"
+	1    6150 3000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6900 3000 7100 3000
+Wire Wire Line
+	6600 3000 6500 3000
+Wire Wire Line
+	7100 2900 6500 2900
+Wire Wire Line
+	6500 2900 6500 3000
+Connection ~ 6500 3000
+Wire Wire Line
+	6500 3000 6300 3000
+$Comp
+L Device:C C21
+U 1 1 64DACA02
+P 6750 3000
+F 0 "C21" V 6498 3000 50  0000 C CNN
+F 1 "10nF" V 6589 3000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6788 2850 50  0001 C CNN
+F 3 "" H 6750 3000 50  0001 C CNN
+F 4 "Kemet" H 6750 3000 50  0001 C CNN "Manufacturer"
+F 5 "C0805C103K1RAC7210" H 6750 3000 50  0001 C CNN "Manufacturer Part Number"
+	1    6750 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7100 2800 7000 2800
+Wire Wire Line
+	7000 2800 7000 2650
+Wire Wire Line
+	5800 3000 6000 3000
+$Comp
+L Switch:SW_SPDT SW?
+U 1 1 64DACA0B
+P 6100 3350
+AR Path="/64DACA0B" Ref="SW?"  Part="1" 
+AR Path="/64D9993D/64DACA0B" Ref="SW2"  Part="1" 
+F 0 "SW2" H 5950 3250 50  0000 C CNN
+F 1 "SW_SPDT" H 6100 3544 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPDT_PCM12" H 6100 3350 50  0001 C CNN
+F 3 "lib/datasheets/MSS34.pdf" H 6100 3350 50  0001 C CNN
+F 4 "Diptronics" H 6100 3350 50  0001 C CNN "Manufacturer"
+F 5 "MSS3-V-T/R" H 6100 3350 50  0001 C CNN "Manufacturer Part Number"
+	1    6100 3350
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 64DACA11
+P 6500 3500
+F 0 "R11" H 6550 3650 50  0000 L CNN
+F 1 "100k" V 6500 3500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6430 3500 50  0001 C CNN
+F 3 "" H 6500 3500 50  0001 C CNN
+F 4 "Yageo" H 6500 3500 50  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-07100KL" H 6500 3500 50  0001 C CNN "Manufacturer Part Number"
+	1    6500 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 64DACA17
+P 6500 3900
+F 0 "R13" H 6550 4050 50  0000 L CNN
+F 1 "100k" V 6500 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6430 3900 50  0001 C CNN
+F 3 "" H 6500 3900 50  0001 C CNN
+F 4 "Yageo" H 6500 3900 50  0001 C CNN "Manufacturer"
+F 5 "RC0805FR-07100KL" H 6500 3900 50  0001 C CNN "Manufacturer Part Number"
+	1    6500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 64DACA1D
+P 6500 4150
+AR Path="/64DACA1D" Ref="#PWR?"  Part="1" 
+AR Path="/64D9993D/64DACA1D" Ref="#PWR047"  Part="1" 
+F 0 "#PWR047" H 6500 3900 50  0001 C CNN
+F 1 "GND" H 6505 3977 50  0000 C CNN
+F 2 "" H 6500 4150 50  0001 C CNN
+F 3 "" H 6500 4150 50  0001 C CNN
+	1    6500 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4150 6500 4050
+Wire Wire Line
+	6500 3750 6500 3700
+Wire Wire Line
+	6500 3350 6500 3250
+Wire Wire Line
+	6500 3250 6600 3250
+Wire Wire Line
+	6900 3250 7000 3250
+Wire Wire Line
+	7000 3250 7000 3100
+Wire Wire Line
+	7000 3100 7100 3100
+$Comp
+L Device:R R8
+U 1 1 64DACA30
+P 4050 3100
+F 0 "R8" H 4100 3250 50  0000 L CNN
+F 1 "2k" V 4050 3100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3980 3100 50  0001 C CNN
+F 3 "" H 4050 3100 50  0001 C CNN
+F 4 "Yageo" H 4050 3100 50  0001 C CNN "Manufacturer"
+F 5 "RC0805JR-072KL" H 4050 3100 50  0001 C CNN "Manufacturer Part Number"
+	1    4050 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 1800 5100 1700
+Wire Wire Line
+	10650 2900 10650 2800
+Wire Wire Line
+	5100 2150 5100 2100
+$Comp
+L Device:R R7
+U 1 1 64DACA4F
+P 10650 3050
+F 0 "R7" H 10700 3200 50  0000 L CNN
+F 1 "120R" V 10650 3050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 10580 3050 50  0001 C CNN
+F 3 "" H 10650 3050 50  0001 C CNN
+F 4 "Yageo" H 10650 3050 50  0001 C CNN "Manufacturer"
+F 5 "RC0805JR-07120RL" H 10650 3050 50  0001 C CNN "Manufacturer Part Number"
+	1    10650 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 64DACA5B
+P 5100 1950
+F 0 "R5" H 5150 2100 50  0000 L CNN
+F 1 "120R" V 5100 1950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5030 1950 50  0001 C CNN
+F 3 "" H 5100 1950 50  0001 C CNN
+F 4 "Yageo" H 5100 1950 50  0001 C CNN "Manufacturer"
+F 5 "RC0805JR-07120RL" H 5100 1950 50  0001 C CNN "Manufacturer Part Number"
+	1    5100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 64DACA67
+P 2050 3600
+F 0 "R12" H 2100 3750 50  0000 L CNN
+F 1 "1M" V 2050 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1980 3600 50  0001 C CNN
+F 3 "" H 2050 3600 50  0001 C CNN
+F 4 "Yageo" H 2050 3600 50  0001 C CNN "Manufacturer"
+F 5 "RC0805JR-071ML" H 2050 3600 50  0001 C CNN "Manufacturer Part Number"
+	1    2050 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C26
+U 1 1 64DACA6D
+P 2250 3600
+F 0 "C26" H 2365 3646 50  0000 L CNN
+F 1 "4.7nF" H 2365 3555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2288 3450 50  0001 C CNN
+F 3 "" H 2250 3600 50  0001 C CNN
+F 4 "Kemet" H 2250 3600 50  0001 C CNN "Manufacturer"
+F 5 "C0805C472K5RACTU" H 2250 3600 50  0001 C CNN "Manufacturer Part Number"
+	1    2250 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 64DACA73
+P 2250 3900
+AR Path="/64DACA73" Ref="#PWR?"  Part="1" 
+AR Path="/64D9993D/64DACA73" Ref="#PWR045"  Part="1" 
+F 0 "#PWR045" H 2250 3650 50  0001 C CNN
+F 1 "GND" H 2255 3727 50  0000 C CNN
+F 2 "" H 2250 3900 50  0001 C CNN
+F 3 "" H 2250 3900 50  0001 C CNN
+	1    2250 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 3450 2050 3350
+Wire Wire Line
+	2050 3350 2250 3350
+Wire Wire Line
+	2250 3350 2250 3250
+Wire Wire Line
+	2250 3450 2250 3350
+Connection ~ 2250 3350
+Wire Wire Line
+	2250 3750 2250 3800
+Wire Wire Line
+	2050 3750 2050 3800
+Wire Wire Line
+	2050 3800 2250 3800
+Connection ~ 2250 3800
+Wire Wire Line
+	2250 3800 2250 3900
+Wire Wire Line
+	2350 3250 2350 3800
+Wire Wire Line
+	2350 3800 2250 3800
+NoConn ~ 2650 3050
+$Comp
+L Device:C C19
+U 1 1 64DACA86
+P 3550 2900
+F 0 "C19" H 3665 2946 50  0000 L CNN
+F 1 "10µF" H 3665 2855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3588 2750 50  0001 C CNN
+F 3 "" H 3550 2900 50  0001 C CNN
+F 4 "amsung Electro-Mechanics" H 3550 2900 50  0001 C CNN "Manufacturer"
+F 5 "CL21A106KOQNNNF" H 3550 2900 50  0001 C CNN "Manufacturer Part Number"
+	1    3550 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2750 3550 2650
+Wire Wire Line
+	2800 2650 3550 2650
+Connection ~ 3550 2650
+$Comp
+L power:GND #PWR034
+U 1 1 64DACA90
+P 3550 3150
+F 0 "#PWR034" H 3550 2900 50  0001 C CNN
+F 1 "GND" H 3555 2977 50  0000 C CNN
+F 2 "" H 3550 3150 50  0001 C CNN
+F 3 "" H 3550 3150 50  0001 C CNN
+	1    3550 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR035
+U 1 1 64DACA96
+P 4550 3150
+F 0 "#PWR035" H 4550 2900 50  0001 C CNN
+F 1 "GND" H 4555 2977 50  0000 C CNN
+F 2 "" H 4550 3150 50  0001 C CNN
+F 3 "" H 4550 3150 50  0001 C CNN
+	1    4550 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR037
+U 1 1 64DACA9C
+P 4050 3350
+F 0 "#PWR037" H 4050 3100 50  0001 C CNN
+F 1 "GND" H 4055 3177 50  0000 C CNN
+F 2 "" H 4050 3350 50  0001 C CNN
+F 3 "" H 4050 3350 50  0001 C CNN
+	1    4050 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 3150 4550 3050
+Wire Wire Line
+	4050 3350 4050 3250
+Wire Wire Line
+	4050 2950 4050 2850
+Wire Wire Line
+	4050 2850 4150 2850
+Wire Wire Line
+	3550 3150 3550 3050
+NoConn ~ 6300 3450
+Wire Wire Line
+	6300 3250 6500 3250
+Connection ~ 6500 3250
+$Comp
+L power:GND #PWR?
+U 1 1 64DACAAA
+P 5400 3250
+AR Path="/64DACAAA" Ref="#PWR?"  Part="1" 
+AR Path="/64D9993D/64DACAAA" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 5400 3000 50  0001 C CNN
+F 1 "GND" H 5405 3077 50  0000 C CNN
+F 2 "" H 5400 3250 50  0001 C CNN
+F 3 "" H 5400 3250 50  0001 C CNN
+	1    5400 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3250 5400 3150
+Wire Wire Line
+	5900 3350 5800 3350
+Wire Wire Line
+	5800 3350 5800 3000
+Wire Wire Line
+	5800 2650 7000 2650
+Connection ~ 5800 3000
+Wire Wire Line
+	5800 3000 5800 2650
+Wire Wire Line
+	5400 2850 5400 2650
+Connection ~ 5800 2650
+Wire Wire Line
+	6800 3700 6500 3700
+Connection ~ 6500 3700
+Wire Wire Line
+	6500 3700 6500 3650
+Wire Wire Line
+	5100 2850 5100 2450
+Wire Wire Line
+	5100 2850 4950 2850
+$Comp
+L power:GND #PWR?
+U 1 1 64DACAC3
+P 3000 4100
+AR Path="/64DACAC3" Ref="#PWR?"  Part="1" 
+AR Path="/64D9993D/64DACAC3" Ref="#PWR046"  Part="1" 
+F 0 "#PWR046" H 3000 3850 50  0001 C CNN
+F 1 "GND" H 3005 3927 50  0000 C CNN
+F 2 "" H 3000 4100 50  0001 C CNN
+F 3 "" H 3000 4100 50  0001 C CNN
+	1    3000 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3200 2800 2650
+Wire Wire Line
+	2800 2650 2650 2650
+Wire Wire Line
+	3000 4100 3000 4000
+$Comp
+L ESD5V5U5ULC:ESD5V5U5ULC D?
+U 1 1 64DACACC
+P 3000 3550
+AR Path="/64DACACC" Ref="D?"  Part="1" 
+AR Path="/64D9993D/64DACACC" Ref="D4"  Part="1" 
+F 0 "D4" H 3330 3546 50  0000 L CNN
+F 1 "ESD5V5U5ULC" H 3330 3455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 3050 3485 50  0001 C CNN
+F 3 "lib/datasheets/ESD5V5U5ULC.pdf" H 3050 3485 50  0001 C CNN
+F 4 "Infineon Technologies" H 3000 3550 50  0001 C CNN "Manufacturer"
+F 5 "ESD5V5U5ULC E6327" H 3000 3550 50  0001 C CNN "Manufacturer Part Number"
+	1    3000 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2950 2900 2950
+Wire Wire Line
+	2900 2950 2900 3200
+Wire Wire Line
+	2650 2850 3000 2850
+Wire Wire Line
+	3000 2850 3000 3200
+Wire Wire Line
+	3150 2850 3000 2850
+Connection ~ 3000 2850
+Wire Wire Line
+	3150 2950 2900 2950
+Connection ~ 2900 2950
+NoConn ~ 3100 3200
+NoConn ~ 3200 3200
+Connection ~ 2800 2650
+Text HLabel 6800 3700 2    50   Output ~ 0
+VBAT
+Text HLabel 3150 2850 2    50   BiDi ~ 0
+D+
+Text HLabel 3150 2950 2    50   BiDi ~ 0
+D-
+$Comp
+L Device:Polyfuse F1
+U 1 1 64DDF663
+P 5800 3900
+F 0 "F1" H 5888 3946 50  0000 L CNN
+F 1 "1.5A" H 5888 3855 50  0000 L CNN
+F 2 "Fuse:Fuse_1206_3216Metric_Castellated" H 5850 3700 50  0001 L CNN
+F 3 "lib/datasheets/0ZCJ.pdf" H 5800 3900 50  0001 C CNN
+F 4 "Bel Fuse" H 5800 3900 50  0001 C CNN "Manufacturer"
+F 5 "0ZCJ0150FF2C" H 5800 3900 50  0001 C CNN "Manufacturer Part Number"
+	1    5800 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3750 5800 3350
+Connection ~ 5800 3350
+$Comp
+L Device:C C27
+U 1 1 64DEF551
+P 6250 5000
+F 0 "C27" H 6300 5100 50  0000 L CNN
+F 1 "100nF" H 6300 4900 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6288 4850 50  0001 C CNN
+F 3 "" H 6250 5000 50  0001 C CNN
+F 4 "Kemet" H 6250 5000 50  0001 C CNN "Manufacturer"
+F 5 "C0805C104M3RAC7210" H 6250 5000 50  0001 C CNN "Manufacturer Part Number"
+	1    6250 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 1700 4550 1700
+Wire Wire Line
+	3550 1700 3550 2650
+Wire Wire Line
+	4550 1700 4550 2450
+Connection ~ 4550 1700
+Wire Wire Line
+	4550 1700 5100 1700
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 64E00AC5
+P 5800 4850
+F 0 "BT1" H 5918 4946 50  0000 L CNN
+F 1 "Li-Ion" H 5918 4855 50  0000 L CNN
+F 2 "18650-holder:18650-holder" V 5800 4910 50  0001 C CNN
+F 3 "lib/datasheets/18650-holder.jpg" V 5800 4910 50  0001 C CNN
+	1    5800 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 64E02949
+P 6250 4600
+F 0 "R14" H 6300 4750 50  0000 L CNN
+F 1 "330R" V 6250 4600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6180 4600 50  0001 C CNN
+F 3 "" H 6250 4600 50  0001 C CNN
+F 4 "Yageo" H 6250 4600 50  0001 C CNN "Manufacturer"
+F 5 "RC0805JR-07330RL" H 6250 4600 50  0001 C CNN "Manufacturer Part Number"
+	1    6250 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 5150 6250 5200
+Wire Wire Line
+	5800 5200 5800 4950
+Wire Wire Line
+	5800 4650 5800 4400
+Wire Wire Line
+	5800 4400 6250 4400
+Wire Wire Line
+	6250 4400 6250 4450
+$Comp
+L power:GND #PWR?
+U 1 1 64E509DC
+P 8700 6150
+AR Path="/64E509DC" Ref="#PWR?"  Part="1" 
+AR Path="/64D9993D/64E509DC" Ref="#PWR049"  Part="1" 
+F 0 "#PWR049" H 8700 5900 50  0001 C CNN
+F 1 "GND" H 8705 5977 50  0000 C CNN
+F 2 "" H 8700 6150 50  0001 C CNN
+F 3 "" H 8700 6150 50  0001 C CNN
+	1    8700 6150
+	1    0    0    -1  
+$EndComp
+Connection ~ 5800 4400
+Wire Wire Line
+	4950 2650 5400 2650
+Connection ~ 5400 2650
+Wire Wire Line
+	5400 2650 5800 2650
+$Comp
+L Device:C C?
+U 1 1 64D9CDE5
+P 9100 3100
+AR Path="/64D9CDE5" Ref="C?"  Part="1" 
+AR Path="/64D9993D/64D9CDE5" Ref="C23"  Part="1" 
+F 0 "C23" H 9150 3200 50  0000 L CNN
+F 1 "22µF" H 9150 3000 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9138 2950 50  0001 C CNN
+F 3 "" H 9100 3100 50  0001 C CNN
+F 4 "Murata" H 9100 3100 50  0001 C CNN "Manufacturer"
+F 5 "GRM21BR61A226ME44L" H 9100 3100 50  0001 C CNN "Manufacturer Part Number"
+	1    9100 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 64DB09E7
+P 9400 3100
+AR Path="/64DB09E7" Ref="C?"  Part="1" 
+AR Path="/64D9993D/64DB09E7" Ref="C24"  Part="1" 
+F 0 "C24" H 9450 3200 50  0000 L CNN
+F 1 "22µF" H 9450 3000 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9438 2950 50  0001 C CNN
+F 3 "" H 9400 3100 50  0001 C CNN
+F 4 "Murata" H 9400 3100 50  0001 C CNN "Manufacturer"
+F 5 "GRM21BR61A226ME44L" H 9400 3100 50  0001 C CNN "Manufacturer Part Number"
+	1    9400 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 2800 9400 2800
+Wire Wire Line
+	9400 2950 9400 2800
+Connection ~ 9400 2800
+Wire Wire Line
+	9400 2800 9600 2800
+$Comp
+L power:GND #PWR039
+U 1 1 64DBE812
+P 9400 3350
+F 0 "#PWR039" H 9400 3100 50  0001 C CNN
+F 1 "GND" H 9405 3177 50  0000 C CNN
+F 2 "" H 9400 3350 50  0001 C CNN
+F 3 "" H 9400 3350 50  0001 C CNN
+	1    9400 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3350 9400 3250
+$Comp
+L Device:LED D3
+U 1 1 64DD53B1
+P 10650 3450
+F 0 "D3" V 10689 3332 50  0000 R CNN
+F 1 "GREEN" V 10598 3332 50  0000 R CNN
+F 2 "LED_SMD:LED_0402_1005Metric" H 10650 3450 50  0001 C CNN
+F 3 "lib/datasheets/APHHS1005ZGCK.pdf" H 10650 3450 50  0001 C CNN
+F 4 "Kingbright" H 10650 3450 50  0001 C CNN "Manufacturer"
+F 5 "APHHS1005ZGCK" H 10650 3450 50  0001 C CNN "Manufacturer Part Number"
+	1    10650 3450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10650 3200 10650 3300
+Wire Wire Line
+	10650 3700 10650 3600
+$Comp
+L power:GND #PWR044
+U 1 1 64DD9B79
+P 10650 3700
+F 0 "#PWR044" H 10650 3450 50  0001 C CNN
+F 1 "GND" H 10655 3527 50  0000 C CNN
+F 2 "" H 10650 3700 50  0001 C CNN
+F 3 "" H 10650 3700 50  0001 C CNN
+	1    10650 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 2800 10350 2800
+$Comp
+L Device:CP C20
+U 1 1 64E2291A
+P 5400 3000
+F 0 "C20" H 5518 3046 50  0000 L CNN
+F 1 "150µF" H 5518 2955 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D" H 5438 2850 50  0001 C CNN
+F 3 "" H 5400 3000 50  0001 C CNN
+F 4 "Kemet" H 5400 3000 50  0001 C CNN "Manufacturer"
+F 5 "T495D157K010ATE100" H 5400 3000 50  0001 C CNN "Manufacturer Part Number"
+	1    5400 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 64EFD063
+P 8700 3050
+AR Path="/64EFD063" Ref="C?"  Part="1" 
+AR Path="/64D9993D/64EFD063" Ref="C22"  Part="1" 
+F 0 "C22" H 8750 3150 50  0000 L CNN
+F 1 "10pF" H 8750 2950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8738 2900 50  0001 C CNN
+F 3 "" H 8700 3050 50  0001 C CNN
+F 4 "Kemet" H 8700 3050 50  0001 C CNN "Manufacturer"
+F 5 "C0805C100K5GACTU" H 8700 3050 50  0001 C CNN "Manufacturer Part Number"
+	1    8700 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 3200 8700 3250
+Wire Wire Line
+	8700 3250 8450 3250
+Wire Wire Line
+	8700 2900 8700 2800
+Wire Wire Line
+	8700 2800 8450 2800
+Connection ~ 8450 2800
+Connection ~ 8700 2800
+$Comp
+L Device:LED D2
+U 1 1 64F18B53
+P 5100 2300
+F 0 "D2" V 5139 2182 50  0000 R CNN
+F 1 "RED" V 5048 2182 50  0000 R CNN
+F 2 "LED_SMD:LED_0402_1005Metric" H 5100 2300 50  0001 C CNN
+F 3 "lib/datasheets/APHHS1005SURCK.pdf" H 5100 2300 50  0001 C CNN
+F 4 "Kingbright" H 5100 2300 50  0001 C CNN "Manufacturer"
+F 5 "APHHS1005SURCK" H 5100 2300 50  0001 C CNN "Manufacturer Part Number"
+	1    5100 2300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_FET:CSD16301Q2 Q1
+U 1 1 64FCA887
+P 7650 5750
+F 0 "Q1" V 7900 5750 50  0000 C CNN
+F 1 "CSD16301Q2" H 7854 5705 50  0001 L CNN
+F 2 "Package_SON:Texas_DQK" H 7850 5675 50  0001 L CIN
+F 3 "lib/datasheets/CSD16301Q2.pdf" V 7650 5750 50  0001 L CNN
+F 4 "Texas Instruments" H 7650 5750 50  0001 C CNN "Manufacturer"
+F 5 "CSD16301Q2" H 7650 5750 50  0001 C CNN "Manufacturer Part Number"
+	1    7650 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:CSD16301Q2 Q2
+U 1 1 64FCB32F
+P 8200 5750
+F 0 "Q2" V 8450 5750 50  0000 C CNN
+F 1 "CSD16301Q2" H 8404 5705 50  0001 L CNN
+F 2 "Package_SON:Texas_DQK" H 8400 5675 50  0001 L CIN
+F 3 "lib/datasheets/CSD16301Q2.pdf" V 8200 5750 50  0001 L CNN
+F 4 "Texas Instruments" H 8200 5750 50  0001 C CNN "Manufacturer"
+F 5 "CSD16301Q2" H 8200 5750 50  0001 C CNN "Manufacturer Part Number"
+	1    8200 5750
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 64FCF1F4
+P 7400 5450
+F 0 "R16" V 7500 5550 50  0000 R CNN
+F 1 "5M1" V 7400 5450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7330 5450 50  0001 C CNN
+F 3 "" H 7400 5450 50  0001 C CNN
+F 4 "Yageo" H 7400 5450 50  0001 C CNN "Manufacturer"
+F 5 "RC0805JR-075M1L" H 7400 5450 50  0001 C CNN "Manufacturer Part Number"
+	1    7400 5450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6250 5200 5800 5200
+Connection ~ 6250 4800
+Wire Wire Line
+	6250 4800 6250 4850
+Wire Wire Line
+	6250 4750 6250 4800
+Wire Wire Line
+	6600 4800 6250 4800
+Wire Wire Line
+	6600 4900 6600 4800
+Wire Wire Line
+	6750 4900 6600 4900
+$Comp
+L Battery_Management:BQ297xy U7
+U 1 1 64EF04AD
+P 7150 5000
+F 0 "U7" H 7150 5367 50  0000 C CNN
+F 1 "BQ297xy" H 7150 5276 50  0000 C CNN
+F 2 "Package_SON:WSON-6_1.5x1.5mm_P0.5mm" H 7150 5350 50  0001 C CNN
+F 3 "lib/datasheets/BQ2970.pdf" H 6900 5200 50  0001 C CNN
+F 4 "Texas Instruments" H 7150 5000 50  0001 C CNN "Manufacturer"
+F 5 "BQ29700DSER" H 7150 5000 50  0001 C CNN "Manufacturer Part Number"
+	1    7150 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 64DEFF91
+P 6600 5350
+F 0 "R15" H 6650 5500 50  0000 L CNN
+F 1 "2k2" V 6600 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6530 5350 50  0001 C CNN
+F 3 "" H 6600 5350 50  0001 C CNN
+F 4 "Yageo" H 6600 5350 50  0001 C CNN "Manufacturer"
+F 5 "RC0805JR-072K2L" H 6600 5350 50  0001 C CNN "Manufacturer Part Number"
+	1    6600 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 5200 6600 5100
+Wire Wire Line
+	6600 5100 6750 5100
+Connection ~ 5800 5200
+$Comp
+L Device:R R17
+U 1 1 650404CD
+P 8450 5450
+F 0 "R17" V 8550 5550 50  0000 R CNN
+F 1 "5M1" V 8450 5450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8380 5450 50  0001 C CNN
+F 3 "" H 8450 5450 50  0001 C CNN
+F 4 "Yageo" H 8450 5450 50  0001 C CNN "Manufacturer"
+F 5 "RC0805JR-075M1L" H 8450 5450 50  0001 C CNN "Manufacturer Part Number"
+	1    8450 5450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7850 5850 8000 5850
+Wire Wire Line
+	7450 5850 7150 5850
+Wire Wire Line
+	7150 5850 7150 5450
+Wire Wire Line
+	7150 5450 7250 5450
+Wire Wire Line
+	8400 5850 8700 5850
+Wire Wire Line
+	8700 5850 8700 5450
+Wire Wire Line
+	8700 5450 8600 5450
+Wire Wire Line
+	8200 5550 8200 5450
+Wire Wire Line
+	8200 5450 8300 5450
+Wire Wire Line
+	7650 5550 7650 5450
+Wire Wire Line
+	7650 5450 7550 5450
+Wire Wire Line
+	7550 5100 7650 5100
+Wire Wire Line
+	7650 5100 7650 5450
+Connection ~ 7650 5450
+Wire Wire Line
+	7550 4900 8200 4900
+Wire Wire Line
+	8200 4900 8200 5450
+Connection ~ 8200 5450
+Wire Wire Line
+	7150 5300 7150 5450
+Connection ~ 7150 5450
+Wire Wire Line
+	5800 5850 7150 5850
+Wire Wire Line
+	5800 5200 5800 5850
+Connection ~ 7150 5850
+Wire Wire Line
+	8700 6150 8700 6100
+Connection ~ 8700 5850
+$Comp
+L power:GND #PWR?
+U 1 1 65083DC2
+P 6600 5550
+AR Path="/65083DC2" Ref="#PWR?"  Part="1" 
+AR Path="/64D9993D/65083DC2" Ref="#PWR048"  Part="1" 
+F 0 "#PWR048" H 6600 5300 50  0001 C CNN
+F 1 "GND" H 6605 5377 50  0000 C CNN
+F 2 "" H 6600 5550 50  0001 C CNN
+F 3 "" H 6600 5550 50  0001 C CNN
+	1    6600 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 5550 6600 5500
+$Comp
+L Device:R R18
+U 1 1 64FC1D65
+P 7900 6100
+F 0 "R18" V 8000 6200 50  0000 R CNN
+F 1 "0R" V 7900 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 7830 6100 50  0001 C CNN
+F 3 "" H 7900 6100 50  0001 C CNN
+F 4 "Panasonic" H 7900 6100 50  0001 C CNN "Manufacturer"
+F 5 "ERJ-8GEY0R00V" H 7900 6100 50  0001 C CNN "Manufacturer Part Number"
+	1    7900 6100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7750 6100 7150 6100
+Wire Wire Line
+	7150 6100 7150 5850
+Wire Wire Line
+	8050 6100 8700 6100
+Connection ~ 8700 6100
+Wire Wire Line
+	8700 6100 8700 5850
+Wire Wire Line
+	5800 4050 5800 4400
+$EndSCHEMATC

@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name TPS61230A)(type Legacy)(uri ${KIPRJMOD}/lib/TPS61230A.lib)(options "")(descr ""))
+  (lib (name LED_BGR)(type Legacy)(uri ${KIPRJMOD}/lib/LED_BGR.lib)(options "")(descr ""))
+  (lib (name ESD5V5U5ULC)(type Legacy)(uri ${KIPRJMOD}/lib/ESD5V5U5ULC.lib)(options "")(descr ""))
+  (lib (name FS8205A)(type Legacy)(uri ${KIPRJMOD}/lib/FS8205A.lib)(options "")(descr ""))
+  (lib (name DW01)(type Legacy)(uri ${KIPRJMOD}/lib/DW01.lib)(options "")(descr ""))
+  (lib (name MAX98357)(type Legacy)(uri ${KIPRJMOD}/lib/MAX98357.lib)(options "")(descr ""))
+)

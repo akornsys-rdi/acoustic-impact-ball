@@ -1,8 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP SAMD21G18A-AU
-D TQFP48, 32K Flash, 4K RAM, 48MHz, CortexM0+
-K ARM 32bit Microcontroller 48MHz CortexM0+
-$ENDCMP
-#
-#End Doc Library
